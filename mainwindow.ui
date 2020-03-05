@@ -55,8 +55,78 @@
      <height>20</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Настройка</string>
+    </property>
+    <addaction name="actionDatabase"/>
+    <addaction name="actionParams"/>
+   </widget>
+   <widget class="QMenu" name="menuSprav">
+    <property name="title">
+     <string>Справочники</string>
+    </property>
+    <widget class="QMenu" name="menuClients">
+     <property name="title">
+      <string>Клиенты</string>
+     </property>
+     <addaction name="actionClientList"/>
+     <addaction name="actionFirmList"/>
+    </widget>
+    <addaction name="menuClients"/>
+   </widget>
+   <addaction name="menuSprav"/>
+   <addaction name="menuSettings"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBarClients">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>true</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftToolBarArea|Qt::RightToolBarArea</set>
+   </property>
+   <property name="floatable">
+    <bool>true</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionDatabase">
+   <property name="icon">
+    <iconset resource="resourse.qrc">
+     <normaloff>:/Images/databaseserver.png</normaloff>:/Images/databaseserver.png</iconset>
+   </property>
+   <property name="text">
+    <string>База данных</string>
+   </property>
+  </action>
+  <action name="actionParams">
+   <property name="icon">
+    <iconset resource="resourse.qrc">
+     <normaloff>:/Images/settings.png</normaloff>:/Images/settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>Параметры</string>
+   </property>
+  </action>
+  <action name="actionClientList">
+   <property name="text">
+    <string>Список клиентов</string>
+   </property>
+  </action>
+  <action name="actionFirmList">
+   <property name="text">
+    <string>Юрю Лица</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="resourse.qrc"/>

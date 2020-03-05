@@ -3,5 +3,7 @@
         <file>Images/logo.png</file>
         <file>Images/supporticon.png</file>
         <file>Images/logo.ico</file>
+        <file>Images/databaseserver.png</file>
+        <file>Images/settings.png</file>
     </qresource>
 </RCC>
