@@ -19,6 +19,9 @@ protected:
     void changeEvent(QEvent *e);
 
 private:
+    void createUI();
+    void createTitle();
+private:
     Ui::ClientInfoDialog *ui;
     uint clientID;
 };

@@ -7,6 +7,7 @@
 #include "Clients/clientslistdialog.h"
 #include "DynamicButton/dynamiicbutton.h"
 #include "Clients/clientinfodialog.h"
+#include "Clients/addclientdialog.h"
 
 #include <QMessageBox>
 #include <QSqlQuery>
@@ -78,7 +79,7 @@ void MainWindow::setToolBarClients()
         return;
     }
     while(q.next()){
-         DynamiicButton *button = new DynamiicButton(q.value(0).toInt(),this);
+         DynamiicButton *button = new DynamiicButton(q.value(0).toUInt(),this);
          button->setText(q.value(1).toString());
 //         button->setStyleSheet("color: white;"
 //                               "background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #444450, stop: 0.49 #444450, stop: 0.5 #3c3c46, stop: 1 #1f1f24);"
@@ -115,6 +116,34 @@ void MainWindow::setToolBarClients()
     }
     q.finish();
     ui->toolBarClients->addSeparator();
+
+
+    QWidget *spacerWidget = new QWidget(this);
+    spacerWidget->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    spacerWidget->setVisible(true);
+    QPushButton *pbNewClient = new QPushButton(this);
+    pbNewClient->setStyleSheet("font-size: 16px;"
+                             "font-weight: bold;"
+                             "font-variant: small-caps;"
+                             "font-family: serif;"
+                             "padding-left:10px;"
+                             "padding-right:10px;"
+                             "min-width: 100px;"
+                             "max-width: 100px;"
+                             "min-height: 20px;"
+                             "max-height: 20px;");
+    pbNewClient->setText("Новый клиент");
+    pbNewClient->setFlat(true);
+
+    ui->toolBarClients->addWidget(spacerWidget);
+    ui->toolBarClients->addWidget(pbNewClient);
+    connect(pbNewClient,&QAbstractButton::clicked,[]() {
+        QSqlRecord r;
+        r.clear();
+        AddClientDialog *addClnDlg = new AddClientDialog(&r);
+        addClnDlg->exec();
+    });
+
 }
 
 
@@ -221,11 +250,8 @@ void MainWindow::on_actionClientList_triggered()
 void MainWindow::slotGetNumberButton()
 {
     DynamiicButton *button = static_cast<DynamiicButton*>(sender());
-    QWidget *oldWdg = this->centralWidget();
-    if(oldWdg != nullptr){
-        oldWdg->deleteLater();
-    }
     ClientInfoDialog *clnInfDlg = new ClientInfoDialog(button->getButtonID());
     this->setCentralWidget(clnInfDlg);
     clnInfDlg->exec();
 }
+
