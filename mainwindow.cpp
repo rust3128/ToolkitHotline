@@ -8,6 +8,8 @@
 #include "DynamicButton/dynamiicbutton.h"
 #include "Clients/clientinfodialog.h"
 #include "Clients/addclientdialog.h"
+#include "Settings/pluginslistdialog.h"
+#include "Settings/migrateoptionsdialog.h"
 
 #include <QMessageBox>
 #include <QSqlQuery>
@@ -136,6 +138,7 @@ void MainWindow::setToolBarClients()
     pbNewClient->setFlat(true);
 
     ui->toolBarClients->addWidget(spacerWidget);
+    ui->toolBarClients->addSeparator();
     ui->toolBarClients->addWidget(pbNewClient);
     connect(pbNewClient,&QAbstractButton::clicked,[]() {
         QSqlRecord r;
@@ -255,3 +258,16 @@ void MainWindow::slotGetNumberButton()
     clnInfDlg->exec();
 }
 
+
+void MainWindow::on_actionPlugins_triggered()
+{
+    PluginsListDialog *plgLstDlg = new PluginsListDialog(this);
+    plgLstDlg->exec();
+}
+
+void MainWindow::on_actionMigrateOptions_triggered()
+{
+    MigrateOptionsDialog *mgOptDlg = new MigrateOptionsDialog();
+    this->setCentralWidget(mgOptDlg);
+    mgOptDlg->exec();
+}

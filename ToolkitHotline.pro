@@ -20,12 +20,16 @@ SOURCES += \
     Clients/addclientdialog.cpp \
     Clients/clientinfodialog.cpp \
     Clients/clientslistdialog.cpp \
+    Clients/contactdialog.cpp \
+    Clients/serversdialog.cpp \
     ConnectionSettingDialog/connectionsettingdialog.cpp \
     DataBase/database.cpp \
     DynamicButton/dynamiicbutton.cpp \
     GlobalSettings/globalsettings.cpp \
     LoggingCategories/loggingcategories.cpp \
     OptionsDialog/optionsdialog.cpp \
+    Settings/migrateoptionsdialog.cpp \
+    Settings/pluginslistdialog.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -33,20 +37,28 @@ HEADERS += \
     Clients/addclientdialog.h \
     Clients/clientinfodialog.h \
     Clients/clientslistdialog.h \
+    Clients/contactdialog.h \
+    Clients/serversdialog.h \
     ConnectionSettingDialog/connectionsettingdialog.h \
     DataBase/database.h \
     DynamicButton/dynamiicbutton.h \
     GlobalSettings/globalsettings.h \
     LoggingCategories/loggingcategories.h \
     OptionsDialog/optionsdialog.h \
+    Settings/migrateoptionsdialog.h \
+    Settings/pluginslistdialog.h \
     mainwindow.h
 
 FORMS += \
     Clients/addclientdialog.ui \
     Clients/clientinfodialog.ui \
     Clients/clientslistdialog.ui \
+    Clients/contactdialog.ui \
+    Clients/serversdialog.ui \
     ConnectionSettingDialog/connectionsettingdialog.ui \
     OptionsDialog/optionsdialog.ui \
+    Settings/migrateoptionsdialog.ui \
+    Settings/pluginslistdialog.ui \
     mainwindow.ui
 
 # Default rules for deployment.

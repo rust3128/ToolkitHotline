@@ -52,7 +52,7 @@
      <x>0</x>
      <y>0</y>
      <width>990</width>
-     <height>20</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuSettings">
@@ -74,6 +74,8 @@
      <addaction name="actionFirmList"/>
     </widget>
     <addaction name="menuClients"/>
+    <addaction name="actionPlugins"/>
+    <addaction name="actionMigrateOptions"/>
    </widget>
    <addaction name="menuSprav"/>
    <addaction name="menuSettings"/>
@@ -98,6 +100,18 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+  </widget>
+  <widget class="QToolBar" name="toolBarMain">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionMigrateOptions"/>
   </widget>
   <action name="actionDatabase">
    <property name="icon">
@@ -125,6 +139,20 @@
   <action name="actionFirmList">
    <property name="text">
     <string>Юрю Лица</string>
+   </property>
+  </action>
+  <action name="actionPlugins">
+   <property name="text">
+    <string>Плагины</string>
+   </property>
+  </action>
+  <action name="actionMigrateOptions">
+   <property name="icon">
+    <iconset resource="resourse.qrc">
+     <normaloff>:/Images/options.png</normaloff>:/Images/options.png</iconset>
+   </property>
+   <property name="text">
+    <string>Мигрируещие настройки</string>
    </property>
   </action>
  </widget>

@@ -5,5 +5,8 @@
         <file>Images/logo.ico</file>
         <file>Images/databaseserver.png</file>
         <file>Images/settings.png</file>
+        <file>Images/add_icon.png</file>
+        <file>Images/useradd.png</file>
+        <file>Images/options.png</file>
     </qresource>
 </RCC>

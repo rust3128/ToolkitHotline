@@ -23,6 +23,10 @@ private slots:
     void iconActivated(QSystemTrayIcon::ActivationReason reason);
     void on_actionClientList_triggered();
     void slotGetNumberButton();
+    void on_actionPlugins_triggered();
+
+    void on_actionMigrateOptions_triggered();
+
 private:
     void createUI();
     void setToolBarClients();
