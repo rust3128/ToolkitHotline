@@ -29,6 +29,7 @@ SOURCES += \
     LoggingCategories/loggingcategories.cpp \
     OptionsDialog/optionsdialog.cpp \
     Settings/migrateoptionsdialog.cpp \
+    Settings/pluginnewdialog.cpp \
     Settings/pluginslistdialog.cpp \
     main.cpp \
     mainwindow.cpp
@@ -46,6 +47,7 @@ HEADERS += \
     LoggingCategories/loggingcategories.h \
     OptionsDialog/optionsdialog.h \
     Settings/migrateoptionsdialog.h \
+    Settings/pluginnewdialog.h \
     Settings/pluginslistdialog.h \
     mainwindow.h
 
@@ -58,6 +60,7 @@ FORMS += \
     ConnectionSettingDialog/connectionsettingdialog.ui \
     OptionsDialog/optionsdialog.ui \
     Settings/migrateoptionsdialog.ui \
+    Settings/pluginnewdialog.ui \
     Settings/pluginslistdialog.ui \
     mainwindow.ui
 

@@ -36,6 +36,10 @@ private slots:
 
     void on_tableView_doubleClicked(const QModelIndex &idx);
 
+    void on_pushButtonClose_clicked();
+
+    void on_buttonBoxEdit_rejected();
+
 private:
     void createUI();
     void createModel();
@@ -46,7 +50,6 @@ private:
     QSqlTableModel *modelMO;
     QSortFilterProxyModel *proxyModel;
     migOpt curMigOpt;
-    bool isNew;
 };
 
 #endif // MIGRATEOPTIONSDIALOG_H

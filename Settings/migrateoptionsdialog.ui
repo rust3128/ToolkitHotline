@@ -37,7 +37,15 @@
       <enum>QFrame::Raised</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout_3">
-      <item row="0" column="0" colspan="2">
+      <item row="2" column="2">
+       <widget class="QPushButton" name="pushButtonAdd">
+        <property name="text">
+         <string>Добавить
+Опцию</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="3">
        <widget class="QTableView" name="tableView">
         <property name="editTriggers">
          <set>QAbstractItemView::NoEditTriggers</set>
@@ -53,7 +61,14 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="0">
+      <item row="3" column="2">
+       <widget class="QPushButton" name="pushButtonClose">
+        <property name="text">
+         <string>Закрыть</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" rowspan="2">
        <widget class="QGroupBox" name="groupBox">
         <property name="title">
          <string>Поиск</string>
@@ -90,14 +105,6 @@
           <widget class="QLineEdit" name="lineEdit"/>
          </item>
         </layout>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QPushButton" name="pushButtonAdd">
-        <property name="text">
-         <string>Добавить
-Опцию</string>
-        </property>
        </widget>
       </item>
      </layout>

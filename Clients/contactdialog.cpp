@@ -73,3 +73,8 @@ void ContactDialog::on_buttonBox_accepted()
     qInfo(logInfo()) << "Информация о контакте "+ui->lineEditFIO->text().trimmed()+" успешно обновлена.";
     this->accept();
 }
+
+void ContactDialog::on_buttonBox_rejected()
+{
+    this->close();
+}

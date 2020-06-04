@@ -15,6 +15,9 @@ public:
     explicit PluginsListDialog(QWidget *parent = nullptr);
     ~PluginsListDialog();
 
+private slots:
+    void on_pushButtonAdd_clicked();
+
 private:
     Ui::PluginsListDialog *ui;
 };
